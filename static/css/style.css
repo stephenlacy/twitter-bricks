@@ -1,0 +1,184 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300);
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #262626;
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+a{
+	text-decoration: none;
+	color: #79CDCD;
+}
+
+#banner{
+	position: fixed;
+	left: 0px;
+	width: 100%;
+	z-index: 2;
+}
+
+#change-hash-tag{
+	position: absolute;
+	right: 20px;
+	width: 100px;
+	text-align: center;
+	cursor: pointer;
+}
+#change-hash-tag:hover{
+	background: rgba(20,20,20,.5);
+	color: #fff;
+}
+#banner, #change-hash-tag{
+	top: 0px;	
+	height: 30px;
+	background: rgba(20,20,20,.2);	
+	padding: 5px 0 0 0;
+	color: #cdcdcd;
+}
+#banner #list{
+	padding-left: 20px;
+}
+#popup{
+	position: absolute;
+	top: 23%;
+	left: 38%;
+	width: 20%;
+	height: 15%;
+	background: #efefef;
+	z-index: 2;
+	padding: 5% 2% 2% 2%;
+	text-align: center;
+}
+#popup input{
+	padding: 10px;
+	border: 1px solid #dedede;
+	outline: none;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+#content{
+	position: relative;
+	width: 90%;
+	height: 90%;
+	text-align: center;
+	margin: 5% 5% 5% 5%;
+	 
+}
+
+#content li{
+	position: relative;
+	width: 400px;
+	height: 150px;
+	background: #567E3A;
+	display: inline-block;
+	margin: 0 2% 2% 0;
+	border-radius: 2px;
+	color: #fafafa;
+}
+#content img{
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	width: 90px;
+	border: 2px solid #cdcdcd;
+}
+#content #name{
+	top: 25px;
+	height: 25px;
+	font-weight: bold;
+}
+#content #message{
+	top: 50px;
+	width: 210px;	
+	height: 80px;
+	text-align: left;
+}
+#content #name, #content #message{
+	position: absolute;
+	left: 150px;
+	overflow: hidden;	
+}
+#about{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 50px;
+	height: 50px;
+	background: rgba(20,20,20,.5);
+	border-radius: 0 50px 0 0;
+	padding: 15px;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+#about div{
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 250px;
+	height: 100px;
+	padding: 20px;
+	background: rgba(20,20,20,.5);
+	box-sizing: border-box;
+}
+
+@media all and (max-width: 850px) { 
+	#popup{
+		width: 80%;
+		left: 7%;
+		height: 100px;
+	}
+}
+
+@media all and (max-width: 680px) { 
+	#content li{
+		width: 98%;
+	}
+	#content img{
+		width: 20%;
+		top: 15px;
+		left: 15px;
+	}
+	#content #name{
+		top: 10px;
+	}
+	#content #message{
+		top: 40px;
+		width: 70%;	
+	}
+	#content #name, #content #message{
+		left: 30%;	
+	}
+
+
+
+
+}
+
+
+
+
+ 
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.3); 
+    background: rgba(20,20,20,.5);
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    -webkit-box-shadow:  0 0 5px rgba(0,0,0,0.5); 
+    background: rgba(20,20,20,.5);
+}

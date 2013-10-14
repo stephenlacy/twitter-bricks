@@ -1,0 +1,19 @@
+{
+  "name": "Twitter Bricks",
+  "description": "Realtime Streaming Tweet feed written in JavaScript for node.js - using Twitter API 1.1",
+  "version": "0.0.1",
+  "author": "Steve Lacy me@slacy.me (slacy.me)",
+  "main": "./server.js",
+  "keywords":["twitter", "stream", "tweet", "feed", "wall"],
+  "dependencies": {
+    "express": "3.x",
+    "twit":"1.1.x",
+    "hbs":"2.4.x",
+    "socket.io":"0.9.x"
+  },
+  "licenses":[
+    {
+      "type":"MIT"
+    }
+  ]
+}
