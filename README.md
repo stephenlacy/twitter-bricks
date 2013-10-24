@@ -1,3 +1,6 @@
+!["Twitter Bricks](http://stevelacy.github.io/twitter-bricks/images/twitter-bricks.png)
+
+
 #Twitter Bricks
 
 ### Realtime Streaming Tweet feed written in JavaScript for node.js
