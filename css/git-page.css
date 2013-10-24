@@ -1,0 +1,103 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300);
+
+html, body{
+	padding: 0;
+	margin: 0;
+}
+body{
+	width: 100%;
+	background: #fafafa;
+	font-family: 'Roboto', sans-serif;
+}
+a{
+	text-decoration: none;
+	color: #74daff;
+}
+a:hover{
+	text-decoration: underline;
+}
+#main{
+	position: relative;
+	padding: 0;
+}
+.content{
+	width: 100%;
+	padding-top: 50px;
+}
+.content img{
+	max-width: 60%;
+}
+.spacer{
+ 	height: 100px;
+ }
+.footer{
+	position: absolute;
+	width: 100%;
+}
+
+.text-huge{
+	font-size: 150px;
+}
+.text-large{
+	font-size: 75px;
+}
+.text-med{
+	font-size: 25px;
+}
+.text-blue{
+	color: #74daff;
+}
+.text-black{
+	color: #171717;
+}
+.text-grey{
+	color: #ababab;
+}
+.text-white{
+	color: #fefefe;
+}
+.text-center{
+	text-align: center;
+}
+.bg-blue{
+	background: #74daff;
+}
+
+@media all and (max-width: 600px){
+	.content img{
+		max-width: 90%;
+	}
+}
+
+
+
+
+
+::-webkit-scrollbar { 
+	width: 8px; 
+} 
+::-webkit-scrollbar-track { 
+	background: #efefef; 
+	-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1); 
+} 
+::-webkit-scrollbar-track:hover{
+	background: #dedede;
+}
+::-webkit-scrollbar-thumb { 
+	background: #CCC;
+	-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2); 
+	border-radius: 1px;
+} 
+::-webkit-scrollbar-thumb:hover { 
+	background: #AAA; 
+} 
+::-webkit-scrollbar-thumb:active { 
+	background: #888; 
+-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3); 
+}
+
+
+::selection {
+	background:#000;
+	color:#fff;
+}
