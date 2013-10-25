@@ -7,6 +7,7 @@ var express = require('express')
   , io = require('socket.io').listen(server)
 
 server.listen(5000)
+console.log('Server listening on port 5000')
 
 app.set('view engine', 'html')
 app.use(express.static('static'))
@@ -34,10 +35,10 @@ app.get('/', function(req, res){
 
 
  var T = new Twit({
-    consumer_key:         'ZEZnKlOuys5lE7MxXtUwg'
-  , consumer_secret:      'hjOUNrZaA6Lhd45CJMPjeRCZotXgsnz0uoO6dkxd4cU'
-  , access_token:         '402765441-S4JulpyfHVsnVMNxoEhisrlg31f3IxZHfBnFQrbq'
-  , access_token_secret:  'zcb1IxWdDRwJbRIRnaQED2wEicygdMrqPi1C2PdSLL0'
+    consumer_key:         ''
+  , consumer_secret:      ''
+  , access_token:         ''
+  , access_token_secret:  ''
 })
 
 
