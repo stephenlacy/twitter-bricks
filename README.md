@@ -13,10 +13,15 @@ Twitter Bricks will display a real-time feed of all tweets based on the entered 
 * Real time tweet feed on all connected browsers
 
 
+Desktop view of hash #twitter
+!["Twitter Bricks desktop"](http://stevelacy.github.io/twitter-bricks/images/desktop.png)
 
 *** 
 
-#Instalation instructions
+
+
+
+#Installation instructions
 
 Extract to desiered folder and install the dependencies:
 ``` javascript
