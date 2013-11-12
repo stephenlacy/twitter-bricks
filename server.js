@@ -23,7 +23,7 @@ var index = {
 , about: 'Created by: Steve Lacy slacy.me'
 , example:{
       name:'Steve L '
-    , username:'AZInventor'
+    , username:'SteveDeLacy'
     , tweet:'Tweet! This is an example Tweet brick'
     , icon: 'https://si0.twimg.com/profile_images/378800000449713578/a0d0be39063109369aef6765c83c1bad.png'
   }
