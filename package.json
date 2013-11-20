@@ -1,7 +1,7 @@
 {
   "name": "twitter-bricks",
   "description": "Realtime Streaming Tweet feed written in JavaScript for node.js - using Twitter API 1.1",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Steve Lacy me@slacy.me (slacy.me)",
   "main": "./server.js",
   "keywords":["twitter", "stream", "tweet", "feed", "wall"],
