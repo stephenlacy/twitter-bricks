@@ -30,15 +30,17 @@ npm install
 
 Use [dev.twitter.com](https://dev.twitter.com) to create an app, ensure that the URL is set correctly and enable Access tokens
 
-Edit  `server.js` and insert your Twitter app keys into the following section:
+Create a file `keys.js` and insert your Twitter app keys:
 
-```javascript
-var T = new Twit({
-    consumer_key:         ''
-  , consumer_secret:      ''
-  , access_token:         ''
-  , access_token_secret:  ''
-})
+```js
+
+module.exports = {
+  consumer_key:         '',
+  consumer_secret:      '',
+  access_token:         '',
+  access_token_secret:  ''
+};
+
 ```
 
 Edit `js/jquery.js` and change the host and port to your node server:
@@ -47,9 +49,10 @@ var socket = io.connect('http://localhost:5000');
 ```
 
 Run the node.js app:
-```javascript
+```js
 node server.js
 ```
+or `npm start`
 
 Twitter Bricks will now be running on [http://localhost:5000](http://localhost:5000)
 
@@ -67,7 +70,7 @@ Once running click Change Hash to enter the desired Twitter hash to stream.
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Steve Lacy (me@slacy.me)
+Copyright (c) 2014 Steve Lacy (me@slacy.me)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,58 +1,59 @@
-var express = require('express')
-  , app = express()
-  , hbs = require('hbs')
-  , http = require('http')
-  , server = http.createServer(app)
-  , Twit = require('twit')
-  , io = require('socket.io').listen(server)
+var express = require('express');
+var app = express();
+var jade = require('jade');
+var http = require('http');
+var server = http.createServer(app);
+var Twit = require('twit');
+var io = require('socket.io').listen(server);
 
-server.listen(5000)
-console.log('Server listening on port 5000')
+var keys = require('./keys');
 
-app.set('view engine', 'html')
-app.use(express.static('static'))
-app.engine('html', hbs.__express)
-app.use(express.bodyParser())
+server.listen(5000);
+
+app.set('view engine', 'jade');
+app.use(express.static('static'));
+app.use(express.bodyParser());
 
 
 
 var index = {
-  title:'Twitter Bricks - Twitter stream'
-, listhint:''
-, change: 'Change Hash'
-, about: 'Created by: Steve Lacy slacy.me'
-, example:{
-      name:'Steve L '
-    , username:'SteveDeLacy'
-    , tweet:'Tweet! This is an example Tweet brick'
-    , icon: 'http://slacy.me/images/social.png'
+  title:'Twitter Bricks - Twitter stream',
+  listhint:'',
+  change: 'Change Hash',
+  about: 'Created by: Steve Lacy slacy.me',
+  example:{
+    name:'Steve L ',
+    username:'SteveDeLacy',
+    tweet:'Tweet! This is an example Tweet brick',
+    icon: 'http://slacy.me/images/social.png',
   }
-}
+};
 
 app.get('/', function(req, res){
-  res.render('index', {index:index})
-})
+  res.render('index', {index:index});
+});
 
 
- var T = new Twit({
-    consumer_key:         ''
-  , consumer_secret:      ''
-  , access_token:         ''
-  , access_token_secret:  ''
-})
+var T = new Twit({
+  consumer_key:         keys.consumer_key,
+  consumer_secret:      keys.consumer_secret,
+  access_token:         keys.access_token,
+  access_token_secret:  keys.access_token_secret,
+});
+
 
 
 io.sockets.on('connection', function (socket) {
-  console.log('Socket.io connected')
+  console.log('Socket.io connected');
 
   socket.on('hash', function(hash){
-    var streamHash = hash.hash
-    var stream = T.stream('statuses/filter', { track: streamHash })
+    var streamHash = hash.hash;
+    var stream = T.stream('statuses/filter', { track: streamHash });
 
     stream.on('tweet', function (tweet) {
-      io.sockets.emit('stream', {text:tweet.text, name:tweet.user.name, username:tweet.user.screen_name, icon:tweet.user.profile_image_url, hash:streamHash})
-    })
-  })
-})
+      io.sockets.emit('stream', {text:tweet.text, name:tweet.user.name, username:tweet.user.screen_name, icon:tweet.user.profile_image_url, hash:streamHash});
+    });
+  });
+});
 
  

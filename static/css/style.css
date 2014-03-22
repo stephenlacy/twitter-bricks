@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Roboto:100,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300);
 
 
 *{
@@ -17,54 +17,55 @@ a{
 	color: #79CDCD;
 }
 
-#banner{
+.banner{
 	position: fixed;
-	left: 0px;
+	left: 0;
 	width: 100%;
 	z-index: 2;
 }
 
-#change-hash-tag{
+.change-hash-tag{
 	position: absolute;
 	right: 20px;
 	width: 100px;
 	text-align: center;
 	cursor: pointer;
 }
-#change-hash-tag:hover{
+.change-hash-tag:hover{
 	background: rgba(20,20,20,.5);
 	color: #fff;
 }
-#banner, #change-hash-tag{
-	top: 0px;	
+.banner, .change-hash-tag{
+	top: 0;	
 	height: 30px;
 	background: rgba(20,20,20,.2);	
 	padding: 5px 0 0 0;
 	color: #cdcdcd;
 }
-#banner #list{
+.banner .list{
 	padding-left: 20px;
 }
-#popup{
+.popup{
 	position: absolute;
 	top: 23%;
 	left: 38%;
 	width: 20%;
-	height: 15%;
 	background: #efefef;
 	z-index: 2;
 	padding: 5% 2% 2% 2%;
 	text-align: center;
 }
-#popup input{
+.popup input{
 	padding: 10px;
 	border: 1px solid #dedede;
-	outline: none;
 	display: inline-block;
 	margin-bottom: 20px;
 }
+.popup input:focus{
+	outline: none;
+}
 
-#content{
+.content{
 	position: relative;
 	width: 90%;
 	height: 90%;
@@ -73,7 +74,7 @@ a{
 	 
 }
 
-#content li{
+.content li{
 	position: relative;
 	width: 400px;
 	height: 150px;
@@ -83,31 +84,31 @@ a{
 	border-radius: 2px;
 	color: #fafafa;
 }
-#content img{
+.content img{
 	position: absolute;
 	top: 25px;
 	left: 25px;
 	width: 90px;
 	border: 2px solid #cdcdcd;
 }
-#content #name{
+.content .name{
 	top: 25px;
 	height: 25px;
 	font-weight: bold;
 }
-#content #message{
+.content .message{
 	top: 50px;
 	width: 210px;	
 	height: 80px;
 	text-align: left;
 }
-#content #name, #content #message{
+.content .name, .content .message{
 	position: absolute;
 	left: 150px;
 	overflow: hidden;	
 }
-#about{
-	position: fixed;
+.about{
+	position: absolute;
 	left: 0;
 	bottom: 0;
 	width: 50px;
@@ -118,7 +119,7 @@ a{
 	font-size: 20px;
 	box-sizing: border-box;
 }
-#about div{
+.about div{
 	display: none;
 	position: absolute;
 	bottom: 0;
@@ -131,7 +132,7 @@ a{
 }
 
 @media all and (max-width: 850px) { 
-	#popup{
+	.popup{
 		width: 80%;
 		left: 7%;
 		height: 100px;
@@ -139,22 +140,22 @@ a{
 }
 
 @media all and (max-width: 680px) { 
-	#content li{
+	.content li{
 		width: 98%;
 	}
-	#content img{
+	.content img{
 		width: 20%;
 		top: 15px;
 		left: 15px;
 	}
-	#content #name{
+	.content .name{
 		top: 10px;
 	}
-	#content #message{
+	.content .message{
 		top: 40px;
 		width: 70%;	
 	}
-	#content #name, #content #message{
+	.content .name, .content .message{
 		left: 30%;	
 	}
 

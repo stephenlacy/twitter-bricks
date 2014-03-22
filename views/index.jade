@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width initial-scale=1")
+		meta(name="mobile-web-app-capable" content="yes")
+		title #{index.title}
+		link(rel="stylesheet" href="/css/style.css")
+		link(rel="shortcut icon" sizes="196x196" href="/images/icon-196.png")
+		script(src="http://code.jquery.com/jquery-2.0.3.min.js")
+		script(src="/socket.io/socket.io.js")
+		script(src="/js/jquery.js")
+
+	body
+
+		.banner
+			.list #{index.listhint}
+			.change-hash-tag #{index.change}
+		.popup
+			input.hash-tag(type='text' placeholder='#Hashtag')
+			input.change-hash-submit(type='submit')
+		.content
+			li
+				img(src="#{index.example.icon}" alt='')
+				.name #{index.example.name} (@#{index.example.username})
+				.message #{index.example.tweet}
+		.about
+			| ?
+			a(href='http://slacy.me' target="_blank")
+				div #{index.about}
