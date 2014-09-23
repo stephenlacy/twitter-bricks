@@ -16,14 +16,14 @@ Twitter Bricks will display a real-time feed of all tweets based on the entered 
 Desktop view of hash #twitter
 !["Twitter Bricks desktop"](http://stevelacy.github.io/twitter-bricks/images/desktop.png)
 
-*** 
+***
 
 
 
 
 #Installation instructions
 
-Extract to desiered folder and install the dependencies:
+Extract to desired folder and install the dependencies:
 ``` javascript
 npm install
 ```
@@ -45,7 +45,7 @@ module.exports = {
 
 Edit `js/jquery.js` and change the host and port to your node server:
 ```javascript
-var socket = io.connect('http://localhost:5000'); 
+var socket = io.connect('http://localhost:5000');
 ```
 
 Run the node.js app:
